@@ -22,3 +22,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+// Dark mode toggle
+document.getElementById('darkToggle').addEventListener('change', function () {
+  document.body.classList.toggle('dark');
+});
