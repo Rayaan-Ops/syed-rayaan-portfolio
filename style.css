@@ -202,3 +202,25 @@ body.dark header, body.dark footer {
 body.dark a {
   color: #58a6ff;
 }
+/* Timeline Section */
+.timeline {
+  border-left: 3px solid #0366d6;
+  padding-left: 20px;
+  margin-top: 1.5rem;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #0366d6;
+  border-radius: 50%;
+}
