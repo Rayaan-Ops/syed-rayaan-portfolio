@@ -87,3 +87,51 @@ section h2:hover {
   height: auto;
   border-radius: 10px;
 }
+/* Responsive Layout */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 1rem 0;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
