@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
   padding: 20px;
 }
 
+/* Header */
 header {
   background-color: #2b2d42;
   color: #fff;
@@ -21,28 +23,42 @@ header {
   border-radius: 12px;
 }
 
-h1 {
+header h1 {
   font-size: 2.5em;
 }
 
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Typography */
 h2 {
   color: #2b2d42;
   margin: 20px 0 10px;
+  transition: color 0.3s ease;
 }
 
+h2:hover {
+  color: #e63946;
+}
+
+/* Sections */
 section {
   background: #ffffff;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Lists */
 ul {
   list-style-type: square;
   margin-left: 20px;
 }
 
+/* Links */
 a {
   color: #1b76d4;
   text-decoration: none;
@@ -53,16 +69,23 @@ a:hover {
   text-decoration: underline;
 }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #555;
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #2b2d42;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-section h2:hover {
-  color: #e63946;
-  transition: color 0.3s ease;
+.btn:hover {
+  background-color: #1a1c2b;
 }
+
+/* Project Gallery */
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -72,14 +95,14 @@ section h2:hover {
 .project-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
@@ -87,6 +110,7 @@ section h2:hover {
   height: auto;
   border-radius: 10px;
 }
+
 /* Responsive Layout */
 @media (max-width: 768px) {
   body {
@@ -135,7 +159,8 @@ section h2:hover {
     margin-top: 0.5rem;
   }
 }
-/* Toggle Switch Style */
+
+/* Toggle Switch */
 .toggle-container {
   display: flex;
   justify-content: center;
@@ -165,7 +190,7 @@ section h2:hover {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 24px;
 }
 
@@ -177,7 +202,7 @@ section h2:hover {
   left: 3px;
   bottom: 3px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
@@ -189,31 +214,35 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Dark Mode Styles */
+/* Dark Mode */
 body.dark {
   background-color: #121212;
   color: #eee;
 }
 
-body.dark header, body.dark footer {
+body.dark header,
+body.dark footer {
   background-color: #1f1f1f;
 }
 
 body.dark a {
   color: #58a6ff;
 }
-/* Timeline Section */
-.timeline {
-  border-left: 3px solid #0366d6;
-  padding-left: 20px;
-  margin-top: 1.5rem;
+
+body.dark .btn {
+  background-color: #444;
 }
 
-/* Timeline Section */
+body.dark .btn:hover {
+  background-color: #666;
+}
+
+/* Timeline */
 .timeline {
   position: relative;
   padding-left: 40px;
   border-left: 4px solid #007bff;
+  margin-top: 1.5rem;
 }
 
 .timeline-item {
@@ -232,6 +261,8 @@ body.dark a {
   border-radius: 50%;
   border: 2px solid #fff;
 }
+
+/* Footer */
 footer {
   text-align: center;
   background: #f5f5f5;
