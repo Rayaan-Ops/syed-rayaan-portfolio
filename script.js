@@ -31,4 +31,8 @@ if (darkToggle) {
     document.body.classList.toggle('dark');
   });
 }
+const toggle = document.getElementById("darkToggle");
 
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark-mode");
+});
