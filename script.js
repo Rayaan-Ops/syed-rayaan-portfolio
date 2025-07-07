@@ -1,28 +1,34 @@
 // script.js
 
-// Hover effect for buttons
+// ✅ Hover effect for buttons
 document.querySelectorAll('button, .btn').forEach(button => {
-  button.addEventListener('mouseover', () => {
-    button.style.transform = 'scale(1.05)';
+  button.addEventListener('mouseenter', () => {
     button.style.transition = 'transform 0.3s ease';
+    button.style.transform = 'scale(1.05)';
   });
 
-  button.addEventListener('mouseout', () => {
+  button.addEventListener('mouseleave', () => {
     button.style.transform = 'scale(1)';
   });
 });
 
-// Smooth scroll for anchor links
+// ✅ Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
-// Dark mode toggle
-document.getElementById('darkToggle').addEventListener('change', function () {
-  document.body.classList.toggle('dark');
-});
+
+// ✅ Dark mode toggle
+const darkToggle = document.getElementById('darkToggle');
+if (darkToggle) {
+  darkToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+  });
+}
+
