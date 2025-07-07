@@ -1,5 +1,3 @@
-// script.js
-
 // ✅ Hover effect for buttons
 document.querySelectorAll('button, .btn').forEach(button => {
   button.addEventListener('mouseenter', () => {
@@ -12,7 +10,7 @@ document.querySelectorAll('button, .btn').forEach(button => {
   });
 });
 
-// ✅ Smooth scroll for anchor links
+// ✅ Smooth scroll (optional)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href');
@@ -24,15 +22,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ✅ Dark mode toggle
+// ✅ Dark mode toggle using ONE class only
 const darkToggle = document.getElementById('darkToggle');
 if (darkToggle) {
   darkToggle.addEventListener('change', () => {
     document.body.classList.toggle('dark');
   });
 }
-const toggle = document.getElementById("darkToggle");
-
-toggle.addEventListener("change", () => {
-  document.body.classList.toggle("dark-mode");
-});
